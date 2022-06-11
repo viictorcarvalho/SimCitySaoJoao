@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/produtosFragment">
+    <fragment
+        android:id="@+id/produtosFragment"
+        android:name="br.com.zup.simcitysaojoao.ProdutosFragment"
+        android:label="fragment_produtos"
+        tools:layout="@layout/fragment_produtos" >
+        <action
+            android:id="@+id/action_produtosFragment_to_valorTotalFragment"
+            app:destination="@id/valorTotalFragment" />
+        <action
+            android:id="@+id/action_produtosFragment_to_produto_item"
+            app:destination="@id/produto_item" />
+        <action
+            android:id="@+id/action_produtosFragment_to_homeActivity2"
+            app:destination="@id/homeActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/valorTotalFragment"
+        android:name="br.com.zup.simcitysaojoao.ValorTotalFragment"
+        android:label="fragment_valor_total"
+        tools:layout="@layout/fragment_valor_total" >
+        <action
+            android:id="@+id/action_valorTotalFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
+        <action
+            android:id="@+id/action_valorTotalFragment_to_produto_item"
+            app:destination="@id/produto_item" />
+    </fragment>
+    <fragment
+        android:id="@+id/produto_item"
+        android:name="br.com.zup.simcitysaojoao.produto_item"
+        android:label="fragment_produto_item"
+        tools:layout="@layout/fragment_produto_item" >
+        <action
+            android:id="@+id/action_produto_item_to_homeActivity2"
+            app:destination="@id/homeActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity2"
+        android:name="br.com.zup.simcitysaojoao.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

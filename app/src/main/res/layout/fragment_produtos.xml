@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProdutosFragment">
+
+
+    <TextView
+        android:id="@+id/tvCadastroProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:text="@string/cadastro_produtos"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/nome_produto"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etQuantidadeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/quantidade_produto"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etValorProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/valor_produto"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etReceita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="Receita"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnCadastrarNovoProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:backgroundTint="@color/terceira_cor"
+        android:text="@string/btn_novo_produto" />
+
+    <Button
+        android:id="@+id/btnVerProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:backgroundTint="@color/quarta_cor"
+        android:text="@string/btn_ver_produtos" />
+
+    <Button
+        android:id="@+id/btnValorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:backgroundTint="@color/primeira_cor"
+        android:text="@string/btn_valor_total" />
+
+</LinearLayout>
