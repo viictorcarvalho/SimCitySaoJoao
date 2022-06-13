@@ -2,24 +2,48 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvItem"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margem_8">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/ivProdutosCadastrados"
+            android:id="@+id/ivCarrinho"
             android:layout_width="@dimen/largura_100"
             android:layout_height="@dimen/altura_100"
             android:layout_margin="@dimen/margem_8"
             android:src="@drawable/carrinho"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvQuantidadeProduto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/quantidade_produto"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivCarrinho"
+            app:layout_constraintStart_toEndOf="@id/ivCarrinho"
+            app:layout_constraintTop_toTopOf="@id/ivCarrinho" />
+
+        <TextView
+            android:id="@+id/tvNomeProduto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_produto"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCarrinho"
+            app:layout_constraintStart_toEndOf="@+id/tvQuantidadeProduto"
+            app:layout_constraintTop_toTopOf="@+id/ivCarrinho" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

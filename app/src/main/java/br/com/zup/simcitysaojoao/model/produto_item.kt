@@ -4,14 +4,16 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class itemProduto(
+class ItemProduto(
     private val nome: String,
     private val quantidade: Int,
-    private val valorProduto: Double,
-    private val receita: String
+    private var imagem: Int
+//  private val valor: Double,
+//  private val receita: String
 ) : Parcelable {
     fun getNome() = this.nome
     fun getQuantidade() = this.quantidade
-    fun getValorProduto() = this.valorProduto
-    fun getReceita() = this.receita
+    fun getImage() = this.imagem
+//    fun getValor() = this.valor
+//    fun getReceita() = this.receita
 }
