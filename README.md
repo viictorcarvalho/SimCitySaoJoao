@@ -1,6 +1,4 @@
-# SimCitySaoJoao
-
-# Desafio
+#~ Desafio ~
 
 # SimCity São João
 
