@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvQuantidadeProduto"
+            android:id="@+id/tvProduto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -32,17 +32,6 @@
             app:layout_constraintBottom_toBottomOf="@id/ivCarrinho"
             app:layout_constraintStart_toEndOf="@id/ivCarrinho"
             app:layout_constraintTop_toTopOf="@id/ivCarrinho" />
-
-        <TextView
-            android:id="@+id/tvNomeProduto"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/nome_produto"
-            android:textSize="@dimen/text_size_14"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCarrinho"
-            app:layout_constraintStart_toEndOf="@+id/tvQuantidadeProduto"
-            app:layout_constraintTop_toTopOf="@+id/ivCarrinho" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

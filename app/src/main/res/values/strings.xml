@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">SimCity Sao Joao</string>
-    <string name="texto_home">"Festas juninas, é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a lus lista de compras para a sua festa junina de maneira fácil e simples, só cadastrar os produtos da sua receita e se divertir!"</string>
+    <string name="app_name">SimCity São João</string>
+    <string name="texto_home">"Festas juninas é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para a sua festa junina de maneira fácil e simples, só cadastrar os produtos da sua receita e se divertir!"</string>
     <string name="btn_home">IR PARA PRODUTOS</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cadastro_produtos">Cadastro de produtos:</string>
     <string name="btn_novo_produto">CADASTRAR NOVO PRODUTO</string>
     <string name="btn_ver_produtos">VER PRODUTOS</string>
@@ -11,4 +10,5 @@
     <string name="quantidade_produto">Quantidade do produto</string>
     <string name="valor_produto">Valor (unitário) do produto</string>
     <string name="produtos_cadastrados">Produtos cadastrados:</string>
+    <string name="receita">Receita</string>
 </resources>

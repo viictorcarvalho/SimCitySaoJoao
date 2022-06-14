@@ -8,4 +8,6 @@
     <dimen name="largura_50">50dp</dimen>
     <dimen name="altura_50">50dp</dimen>
     <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
 </resources>

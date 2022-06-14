@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.simcitysaojoao.ItemProduto
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoItemBinding
 
-class ProdutoAdapter(private var listaProduto: MutableList<ItemProduto>) :
+class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>) :
     RecyclerView.Adapter<ProdutoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,21 +22,11 @@ class ProdutoAdapter(private var listaProduto: MutableList<ItemProduto>) :
 
     override fun getItemCount(): Int = listaProduto.size // ou pode ser usado: return listaProduto.size
 
-    fun atualizarListaProduto(novaListaProduto: MutableList<ItemProduto>) {
-        if (listaProduto.size == 0){
-            listaProduto = novaListaProduto
-        }else{
-            listaProduto.addAll(novaListaProduto)
-        }
-        notifyDataSetChanged()
-    }
-
-    class ViewHolder(val binding: FragmentProdutoItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val binding: FragmentProdutoItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun exibirDadosItemLista(produto: ItemProduto) {
-            binding.ivCarrinho.setImageResource(produto.getImage())
-            binding.tvQuantidadeProduto.text = produto.getQuantidade().toString()
-            binding.tvNomeProduto.text = produto.getNome()
+            binding.tvProduto.text = "${produto.getQuantidade().toString()} - ${produto.getNome()}"
         }
     }
 }

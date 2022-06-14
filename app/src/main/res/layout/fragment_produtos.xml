@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".produto.ProdutosFragment">
 
-
     <TextView
         android:id="@+id/tvCadastroProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_16"
+        android:layout_marginTop="@dimen/margem_32"
         android:text="@string/cadastro_produtos"
-        android:textStyle="bold" />
+        android:textSize="@dimen/text_size_20"
+        android:layout_margin="@dimen/margem_16"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/etNomeProduto"
@@ -45,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_16"
-        android:hint="Receita"
+        android:hint="@string/receita"
         android:inputType="text" />
 
     <Button
@@ -63,13 +64,5 @@
         android:layout_margin="@dimen/margem_16"
         android:backgroundTint="@color/quarta_cor"
         android:text="@string/btn_ver_produtos" />
-
-    <Button
-        android:id="@+id/btnValorTotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_16"
-        android:backgroundTint="@color/primeira_cor"
-        android:text="@string/btn_valor_total" />
 
 </LinearLayout>

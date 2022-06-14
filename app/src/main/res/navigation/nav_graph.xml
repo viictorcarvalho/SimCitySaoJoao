@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/produtosFragment">
+    app:startDestination="@id/telaInicialFragment">
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.zup.simcitysaojoao.produto.ProdutosFragment"
@@ -26,9 +26,5 @@
         android:id="@+id/produtoCadastradoFragment"
         android:name="br.com.zup.simcitysaojoao.produto.produtoCadastrado.ProdutoCadastradoFragment"
         android:label="fragment_produto_cadastrado"
-        tools:layout="@layout/fragment_produto_cadastrado" >
-        <action
-            android:id="@+id/action_produtoCadastradoFragment_to_telaInicialFragment"
-            app:destination="@id/telaInicialFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_produto_cadastrado" />
 </navigation>
