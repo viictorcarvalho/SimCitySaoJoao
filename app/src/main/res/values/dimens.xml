@@ -4,10 +4,20 @@
     <dimen name="margem_16">16dp</dimen>
     <dimen name="margem_8">8dp</dimen>
     <dimen name="largura_100">100dp</dimen>
+    <dimen name="largura_80">80dp</dimen>
     <dimen name="altura_100">100dp</dimen>
+    <dimen name="altura_80">80dp</dimen>
     <dimen name="largura_50">50dp</dimen>
     <dimen name="altura_50">50dp</dimen>
     <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_18">18sp</dimen>
     <dimen name="text_size_20">20sp</dimen>
+    <dimen name="margem_30">30dp</dimen>
+    <dimen name="margem_25">25dp</dimen>
+    <dimen name="margem_20">20dp</dimen>
+    <dimen name="altura_196">196dp</dimen>
+    <dimen name="margem_90">90dp</dimen>
+    <dimen name="largura_368">368dp</dimen>
+    <dimen name="largura_341">341dp</dimen>
 </resources>

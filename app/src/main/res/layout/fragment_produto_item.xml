@@ -4,7 +4,7 @@
     android:id="@+id/cvItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margem_8">
+    android:layout_margin="@dimen/margem_16">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/ivCarrinho"
-            android:layout_width="@dimen/largura_100"
-            android:layout_height="@dimen/altura_100"
+            android:layout_width="@dimen/largura_80"
+            android:layout_height="@dimen/altura_80"
             android:layout_margin="@dimen/margem_8"
             android:src="@drawable/carrinho"
             android:scaleType="centerCrop"
@@ -25,10 +25,11 @@
             android:id="@+id/tvProduto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:text="@string/quantidade_produto"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_size_16"
             android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/margem_25"
             app:layout_constraintBottom_toBottomOf="@id/ivCarrinho"
             app:layout_constraintStart_toEndOf="@id/ivCarrinho"
             app:layout_constraintTop_toTopOf="@id/ivCarrinho" />

@@ -3,32 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".telaInicial.TelaInicialFragment">
 
     <ImageView
         android:id="@+id/ivBandeirinhas"
         android:layout_width="match_parent"
-        android:layout_height="196dp"
-        android:layout_marginTop="90dp"
+        android:layout_height="@dimen/altura_196"
+        android:layout_marginTop="@dimen/margem_90"
         android:padding="@dimen/margem_32"
         android:src="@drawable/balao" />
 
     <TextView
         android:id="@+id/tvHome"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/largura_368"
         android:layout_height="wrap_content"
-        android:layout_margin="26dp"
+        android:layout_margin="@dimen/margem_16"
+        android:justificationMode="inter_word"
+        android:text="@string/texto_home"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_size_18"
-        android:text="@string/texto_home" />
+        android:textSize="@dimen/text_size_16" />
 
     <Button
         android:id="@+id/btnTelaInicial"
-        android:layout_width="341dp"
+        android:layout_width="@dimen/largura_341"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margem_20"
         android:backgroundTint="@color/terceira_cor"
         android:text="@string/btn_home"
         android:layout_gravity="center"/>
