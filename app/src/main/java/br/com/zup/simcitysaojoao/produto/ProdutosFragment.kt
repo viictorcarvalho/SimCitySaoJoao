@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
-import br.com.zup.simcitysaojoao.ItemProduto
-import br.com.zup.simcitysaojoao.MENSAGEM_CADASTRO_PRODUTO
-import br.com.zup.simcitysaojoao.MENSAGEM_CAMPO_OBRIGATORIO
-import br.com.zup.simcitysaojoao.R
+import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoItemBinding
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutosBinding
 import br.com.zup.simcitysaojoao.home.HomeActivity
@@ -37,7 +34,7 @@ class ProdutosFragment : Fragment() {
         }
         criarListaProduto()
 
-        (activity as HomeActivity).supportActionBar?.title = "Produto"
+        (activity as HomeActivity).supportActionBar?.title = PRODUTO
     }
 
     private fun criarListaProduto() {
@@ -66,7 +63,7 @@ class ProdutosFragment : Fragment() {
     }
 
     private fun irParaListaProduto() {
-        val bundle = bundleOf("PRODUTO_KEY" to listaProduto)
+        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_produtosFragment_to_produtoCadastradoFragment, bundle)
     }

@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.simcitysaojoao.ItemProduto
+import br.com.zup.simcitysaojoao.PRODUTO
+import br.com.zup.simcitysaojoao.PRODUTO_KEY
 import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoCadastradoBinding
 import br.com.zup.simcitysaojoao.databinding.FragmentTelaInicialBinding
@@ -27,13 +29,13 @@ private lateinit var binding: FragmentProdutoCadastradoBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listaProduto = arguments?.getParcelableArrayList<ItemProduto>("PRODUTO_KEY")
+        val listaProduto = arguments?.getParcelableArrayList<ItemProduto>(PRODUTO_KEY)
 
         listaProduto?.let {
             binding.rvListaProduto.adapter = ProdutoAdapter(it)
             binding.rvListaProduto.layoutManager = LinearLayoutManager (context)
         }
-        (activity as HomeActivity).supportActionBar?.title = "Produto"
+        (activity as HomeActivity).supportActionBar?.title = PRODUTO
 
     }
 }
