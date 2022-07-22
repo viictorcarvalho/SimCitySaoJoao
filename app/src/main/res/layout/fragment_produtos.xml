@@ -10,7 +10,7 @@
         android:id="@+id/tvCadastroProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margem_32"
+        android:layout_marginTop="@dimen/margem_30"
         android:text="@string/cadastro_produtos"
         android:textSize="@dimen/text_size_20"
         android:layout_margin="@dimen/margem_16"

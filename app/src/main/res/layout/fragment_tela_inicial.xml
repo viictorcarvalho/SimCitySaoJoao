@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/altura_196"
         android:layout_marginTop="@dimen/margem_90"
-        android:padding="@dimen/margem_32"
+        android:padding="@dimen/margem_30"
         android:src="@drawable/balao" />
 
     <TextView

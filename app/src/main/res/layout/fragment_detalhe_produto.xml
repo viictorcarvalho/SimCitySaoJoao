@@ -18,9 +18,10 @@
 
     <TextView
         android:id="@+id/tvNomeProduto"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_size_10"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/margem_10"
         android:text="@string/nome_do_produto"
         android:textSize="@dimen/text_size_16"
         android:textStyle="bold"
@@ -30,67 +31,74 @@
 
     <TextView
         android:id="@+id/tvNomeQuantidadeProduto"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginStart="@dimen/margem_8"
         android:text="@string/quantidade_produto"
         android:textSize="@dimen/text_size_12"
+        android:layout_margin="@dimen/margem_10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivCarrinhoDetalhe" />
 
     <TextView
         android:id="@+id/tvQuantidadeProduto"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
-        android:text="qntd"
+        android:layout_marginStart="@dimen/margem_2"
+        android:text="@string/qntd"
         android:textSize="@dimen/text_size_12"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNomeQuantidadeProduto"
         app:layout_constraintStart_toEndOf="@id/tvNomeQuantidadeProduto"
-        app:layout_constraintTop_toBottomOf="@id/ivCarrinhoDetalhe" />
+        app:layout_constraintTop_toTopOf="@+id/tvNomeQuantidadeProduto" />
 
     <TextView
         android:id="@+id/tvNomeValorProdutoTelaDetalhes"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginStart="@dimen/margem_8"
         android:text="@string/valor_unitario"
         android:textSize="@dimen/text_size_12"
         android:textStyle="bold"
+        android:layout_margin="@dimen/margem_10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeQuantidadeProduto" />
 
     <TextView
         android:id="@+id/tvValorProduto"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="@dimen/margem_2"
         android:text="@string/texto_quantidade"
         android:textSize="@dimen/text_size_12"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNomeValorProdutoTelaDetalhes"
         app:layout_constraintStart_toEndOf="@id/tvNomeValorProdutoTelaDetalhes"
-        app:layout_constraintTop_toBottomOf="@id/tvQuantidadeProduto" />
+        app:layout_constraintTop_toTopOf="@+id/tvNomeValorProdutoTelaDetalhes" />
 
     <TextView
         android:id="@+id/tvNomeReceitaProdutoTelaDetalhes"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginStart="@dimen/margem_8"
         android:text="@string/receita"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:layout_margin="@dimen/margem_10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeValorProdutoTelaDetalhes" />
 
     <TextView
         android:id="@+id/tvReceitaProdutoTelaDetalhes"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margem_0"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_2"
         android:text="@string/texto_receita"
         android:textSize="12sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tvNomeReceitaProdutoTelaDetalhes"
-        app:layout_constraintTop_toBottomOf="@id/tvValorProduto" />
+        app:layout_constraintTop_toTopOf="@+id/tvNomeReceitaProdutoTelaDetalhes" />
 
     <ImageView
         android:id="@+id/btnFavoritar"
