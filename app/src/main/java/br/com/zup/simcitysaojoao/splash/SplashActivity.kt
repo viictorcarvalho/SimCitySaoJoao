@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.home.HomeActivity
-import br.com.zup.simcitysaojoao.telaInicial.TelaInicialFragment
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {

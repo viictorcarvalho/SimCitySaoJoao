@@ -70,8 +70,7 @@ class ProdutosFragment : Fragment() {
 
     private fun msgErro(nome: String, quantidade: String, valor: String, receita: String) {
         binding.etNomeProduto.error = if (nome.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
-        binding.etQuantidadeProduto.error =
-            if (quantidade.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
+        binding.etQuantidadeProduto.error = if (quantidade.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
         binding.etValorProduto.error = if (valor.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
         binding.etReceita.error = if (receita.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
     }

@@ -7,8 +7,14 @@
     <string name="btn_ver_produtos">VER PRODUTOS</string>
     <string name="btn_valor_total">VALOR TOTAL</string>
     <string name="nome_produto">Nome do produto</string>
-    <string name="quantidade_produto">Quantidade do produto</string>
+    <string name="quantidade_produto">Quantidade do produto:</string>
     <string name="valor_produto">Valor (unitário) do produto</string>
     <string name="produtos_cadastrados">Produtos cadastrados:</string>
     <string name="receita">Receita</string>
+    <string name="carrinho_de_compras">Ilustração de um carrinho de compras</string>
+    <string name="coracao_vermelho">Ilustração de um coração vermelho para favoritar</string>
+    <string name="nome_do_produto">Nome do produto</string>
+    <string name="valor_unitario">Valor únitario</string>
+    <string name="texto_receita">texto receita</string>
+    <string name="texto_quantidade">1.0</string>
 </resources>

@@ -9,6 +9,8 @@
     <dimen name="altura_80">80dp</dimen>
     <dimen name="largura_50">50dp</dimen>
     <dimen name="altura_50">50dp</dimen>
+    <dimen name="largura_40">40dp</dimen>
+    <dimen name="altura_40">40dp</dimen>
     <dimen name="text_size_14">14sp</dimen>
     <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_18">18sp</dimen>
@@ -20,4 +22,6 @@
     <dimen name="margem_90">90dp</dimen>
     <dimen name="largura_368">368dp</dimen>
     <dimen name="largura_341">341dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="margin_size_10">10dp</dimen>
 </resources>

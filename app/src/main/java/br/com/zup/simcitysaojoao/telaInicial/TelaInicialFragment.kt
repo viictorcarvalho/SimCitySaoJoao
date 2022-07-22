@@ -27,7 +27,8 @@ class TelaInicialFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnTelaInicial.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_telaInicialFragment_to_produtosFragment)
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_telaInicialFragment_to_produtosFragment)
         }
         (activity as HomeActivity).supportActionBar?.title = SIMCITY_SAO_JOAD
 

@@ -26,5 +26,14 @@
         android:id="@+id/produtoCadastradoFragment"
         android:name="br.com.zup.simcitysaojoao.produto.produtoCadastrado.ProdutoCadastradoFragment"
         android:label="fragment_produto_cadastrado"
-        tools:layout="@layout/fragment_produto_cadastrado" />
+        tools:layout="@layout/fragment_produto_cadastrado" >
+        <action
+            android:id="@+id/action_produtoCadastradoFragment_to_detalheProdutoFragment"
+            app:destination="@id/detalheProdutoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalheProdutoFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.detalhes.DetalheProdutoFragment"
+        android:label="fragment_detalhe_produto"
+        tools:layout="@layout/fragment_detalhe_produto" />
 </navigation>

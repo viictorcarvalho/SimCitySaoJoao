@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margem_16"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".produto.detalhes.DetalheProdutoFragment">
+
+    <ImageView
+        android:id="@+id/ivCarrinhoDetalhe"
+        android:layout_width="@dimen/largura_80"
+        android:layout_height="@dimen/altura_80"
+        android:contentDescription="@string/carrinho_de_compras"
+        android:src="@drawable/carrinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNomeProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_10"
+        android:text="@string/nome_do_produto"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivCarrinhoDetalhe"
+        app:layout_constraintStart_toEndOf="@id/ivCarrinhoDetalhe"
+        app:layout_constraintTop_toTopOf="@id/ivCarrinhoDetalhe" />
+
+    <TextView
+        android:id="@+id/tvNomeQuantidadeProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margem_8"
+        android:text="@string/quantidade_produto"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCarrinhoDetalhe" />
+
+    <TextView
+        android:id="@+id/tvQuantidadeProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="qntd"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvNomeQuantidadeProduto"
+        app:layout_constraintTop_toBottomOf="@id/ivCarrinhoDetalhe" />
+
+    <TextView
+        android:id="@+id/tvNomeValorProdutoTelaDetalhes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_8"
+        android:text="@string/valor_unitario"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeQuantidadeProduto" />
+
+    <TextView
+        android:id="@+id/tvValorProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="@string/texto_quantidade"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvNomeValorProdutoTelaDetalhes"
+        app:layout_constraintTop_toBottomOf="@id/tvQuantidadeProduto" />
+
+    <TextView
+        android:id="@+id/tvNomeReceitaProdutoTelaDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margem_8"
+        android:text="@string/receita"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeValorProdutoTelaDetalhes" />
+
+    <TextView
+        android:id="@+id/tvReceitaProdutoTelaDetalhes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/texto_receita"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvNomeReceitaProdutoTelaDetalhes"
+        app:layout_constraintTop_toBottomOf="@id/tvValorProduto" />
+
+    <ImageView
+        android:id="@+id/btnFavoritar"
+        android:layout_width="@dimen/largura_40"
+        android:layout_height="@dimen/altura_40"
+        android:contentDescription="@string/coracao_vermelho"
+        android:src="@drawable/ic_favoritar"
+        android:layout_marginBottom="@dimen/margem_25"
+        android:layout_marginEnd="@dimen/margem_25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

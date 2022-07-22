@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.simcitysaojoao.ItemProduto
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoItemBinding
 
-class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>) :
+class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>, private var irParaDetalhe: (produto: ItemProduto)-> Unit) :
     RecyclerView.Adapter<ProdutoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -18,15 +18,20 @@ class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val produto = listaProduto[position]
         holder.exibirDadosItemLista(produto)
+
+        holder.binding.cvItem.setOnClickListener {
+            irParaDetalhe(produto)
+        }
     }
 
-    override fun getItemCount(): Int = listaProduto.size // ou pode ser usado: return listaProduto.size
+    override fun getItemCount(): Int =
+        listaProduto.size // ou pode ser usado: return listaProduto.size
 
     class ViewHolder(val binding: FragmentProdutoItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun exibirDadosItemLista(produto: ItemProduto) {
-            binding.tvProduto.text = "${produto.getQuantidade().toString()} - ${produto.getNome()}"
+            binding.tvProduto.text = "${produto.getQuantidade()} - ${produto.getNome()}"
         }
     }
 }
