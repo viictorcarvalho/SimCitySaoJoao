@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentDetalheProdutoBinding
 import br.com.zup.simcitysaojoao.home.HomeActivity
@@ -26,6 +24,7 @@ class DetalheProdutoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as HomeActivity).supportActionBar?.title = DETALHES_PRODUTO
         recuperarDadosProduto()
 

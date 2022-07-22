@@ -3,7 +3,6 @@ package br.com.zup.simcitysaojoao.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -13,8 +12,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

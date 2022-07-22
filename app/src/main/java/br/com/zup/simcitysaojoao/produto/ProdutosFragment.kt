@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
 import br.com.zup.simcitysaojoao.*
-import br.com.zup.simcitysaojoao.databinding.FragmentProdutoItemBinding
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutosBinding
 import br.com.zup.simcitysaojoao.home.HomeActivity
 
@@ -20,7 +19,7 @@ class ProdutosFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentProdutosBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,13 +27,17 @@ class ProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        (activity as HomeActivity).supportActionBar?.title = PRODUTO
+
         binding.btnVerProduto.setOnClickListener {
             irParaListaProduto()
-
         }
-        criarListaProduto()
+        binding.btnValorTotal.setOnClickListener {
+            irParaValorTotal()
+        }
 
-        (activity as HomeActivity).supportActionBar?.title = PRODUTO
+        criarListaProduto()
     }
 
     private fun criarListaProduto() {
@@ -68,9 +71,16 @@ class ProdutosFragment : Fragment() {
             .navigate(R.id.action_produtosFragment_to_produtoCadastradoFragment, bundle)
     }
 
+    private fun irParaValorTotal() {
+        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_produtosFragment_to_valorTotalFragment, bundle)
+    }
+
     private fun msgErro(nome: String, quantidade: String, valor: String, receita: String) {
         binding.etNomeProduto.error = if (nome.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
-        binding.etQuantidadeProduto.error = if (quantidade.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
+        binding.etQuantidadeProduto.error =
+            if (quantidade.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
         binding.etValorProduto.error = if (valor.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
         binding.etReceita.error = if (receita.isBlank()) MENSAGEM_CAMPO_OBRIGATORIO else null
     }

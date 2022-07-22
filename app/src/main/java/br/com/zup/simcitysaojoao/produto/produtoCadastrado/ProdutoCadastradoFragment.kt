@@ -22,7 +22,7 @@ class ProdutoCadastradoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentProdutoCadastradoBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -30,14 +30,15 @@ class ProdutoCadastradoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        (activity as HomeActivity).supportActionBar?.title = PRODUTO
+
         val listaProduto = arguments?.getParcelableArrayList<ItemProduto>(PRODUTO_KEY)
 
         listaProduto?.let {
             binding.rvListaProduto.adapter = ProdutoAdapter(it, this::irParaDetalhesProduto)
             binding.rvListaProduto.layoutManager = LinearLayoutManager(context)
         }
-
-        (activity as HomeActivity).supportActionBar?.title = PRODUTO
     }
 
     private fun irParaDetalhesProduto(produto: ItemProduto)  {

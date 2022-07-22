@@ -10,8 +10,10 @@ class ItemProduto(
     private val valor: Double,
     private val receita: String
 ) : Parcelable {
+
     fun getNome() = this.nome
     fun getQuantidade() = this.quantidade
     fun getValor() = this.valor
     fun getReceita() = this.receita
+    fun getValorTotal() = this.valor * this.quantidade
 }

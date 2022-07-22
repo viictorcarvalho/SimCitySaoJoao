@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_produtosFragment_to_produtoCadastradoFragment"
             app:destination="@id/produtoCadastradoFragment" />
+        <action
+            android:id="@+id/action_produtosFragment_to_valorTotalFragment"
+            app:destination="@id/valorTotalFragment" />
     </fragment>
     <fragment
         android:id="@+id/telaInicialFragment"
@@ -36,4 +39,16 @@
         android:name="br.com.zup.simcitysaojoao.produto.detalhes.DetalheProdutoFragment"
         android:label="fragment_detalhe_produto"
         tools:layout="@layout/fragment_detalhe_produto" />
+    <fragment
+        android:id="@+id/valorTotalFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.ValorTotalFragment"
+        android:label="fragment_valor_total"
+        tools:layout="@layout/fragment_valor_total" >
+        <action
+            android:id="@+id/action_valorTotalFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
+        <action
+            android:id="@+id/action_valorTotalFragment_to_produtoCadastradoFragment"
+            app:destination="@id/produtoCadastradoFragment" />
+    </fragment>
 </navigation>
