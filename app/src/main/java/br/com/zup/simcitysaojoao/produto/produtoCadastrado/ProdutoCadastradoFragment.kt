@@ -41,7 +41,7 @@ class ProdutoCadastradoFragment : Fragment() {
         }
     }
 
-    private fun irParaDetalhesProduto(produto: ItemProduto)  {
+    private fun irParaDetalhesProduto(produto: ItemProduto) {
         val bundle = bundleOf(PRODUTO_KEY to produto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_produtoCadastradoFragment_to_detalheProdutoFragment, bundle)

@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/ivCarrinho"
-        android:layout_width="87dp"
+        android:layout_width="@dimen/largura_80"
         android:layout_height="@dimen/altura_80"
         android:layout_marginTop="@dimen/margem_90"
         android:src="@drawable/carrinho"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
         android:text="@string/valor_total"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_size_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
