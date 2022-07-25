@@ -62,7 +62,7 @@ class ValorTotalFragment : Fragment() {
         }
     }
 
-    fun calcularValorTotal() : Double {
+    fun calcularValorTotal(): Double {
         var somatoria = 0.0
         listaProduto.forEach {
             somatoria += it.getValorTotal()
