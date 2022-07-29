@@ -8,16 +8,16 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import br.com.zup.simcitysaojoao.ItemProduto
-import br.com.zup.simcitysaojoao.PRODUTO
-import br.com.zup.simcitysaojoao.PRODUTO_KEY
-import br.com.zup.simcitysaojoao.R
+import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoCadastradoBinding
 import br.com.zup.simcitysaojoao.home.HomeActivity
 import br.com.zup.simcitysaojoao.produto.adapter.ProdutoAdapter
 
 class ProdutoCadastradoFragment : Fragment() {
     private lateinit var binding: FragmentProdutoCadastradoBinding
+    private val adapter: ProdutoAdapter by lazy {
+        ProdutoAdapter(arrayListOf(), this::irParaDetalhesProduto)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,10 +33,15 @@ class ProdutoCadastradoFragment : Fragment() {
         (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as HomeActivity).supportActionBar?.title = PRODUTO
 
-        val listaProduto = arguments?.getParcelableArrayList<ItemProduto>(PRODUTO_KEY)
+        exibirRecycleView()
+    }
+
+    private fun exibirRecycleView() {
+        val listaProduto = arguments?.getParcelableArrayList<ItemProduto>(LISTA_KEY)
 
         listaProduto?.let {
-            binding.rvListaProduto.adapter = ProdutoAdapter(it, this::irParaDetalhesProduto)
+            adapter.atualizarLista(novaListaProduto = listaProduto)
+            binding.rvListaProduto.adapter = adapter
             binding.rvListaProduto.layoutManager = LinearLayoutManager(context)
         }
     }

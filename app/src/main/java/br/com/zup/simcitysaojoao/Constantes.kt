@@ -1,6 +1,7 @@
 package br.com.zup.simcitysaojoao
 
 const val PRODUTO_KEY = "PRODUTO_KEY"
+const val LISTA_KEY = "LISTA_KEY"
 const val PRODUTO = "Produto"
 const val DETALHES_PRODUTO = "Detalhes do produto"
 const val VALOR_TOTAL_PRODUTO = "Valor total"

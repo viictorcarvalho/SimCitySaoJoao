@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.simcitysaojoao.ItemProduto
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutoItemBinding
 
-class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>, private var irParaDetalhe: (produto: ItemProduto)-> Unit) :
+class ProdutoAdapter(
+    private var listaProduto: ArrayList<ItemProduto>,
+    private var irParaDetalhe: (produto: ItemProduto) -> Unit
+) :
     RecyclerView.Adapter<ProdutoAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,6 +29,11 @@ class ProdutoAdapter(private var listaProduto: ArrayList<ItemProduto>, private v
 
     override fun getItemCount(): Int =
         listaProduto.size // ou pode ser usado: return listaProduto.size
+
+    fun atualizarLista(novaListaProduto: ArrayList<ItemProduto>) {
+        listaProduto = novaListaProduto
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(val binding: FragmentProdutoItemBinding) :
         RecyclerView.ViewHolder(binding.root) {

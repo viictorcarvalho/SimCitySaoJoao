@@ -40,19 +40,19 @@ class ValorTotalFragment : Fragment() {
     }
 
     private fun irParaCadastroProduto() {
-        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
+        val bundle = bundleOf(LISTA_KEY to listaProduto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_valorTotalFragment_to_produtosFragment, bundle)
     }
 
     private fun irParaListaProduto() {
-        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
+        val bundle = bundleOf(LISTA_KEY to listaProduto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_valorTotalFragment_to_produtoCadastradoFragment, bundle)
     }
 
     fun recuperarDadosProduto() {
-        val novaListaProduto = arguments?.getParcelableArrayList<ItemProduto>(PRODUTO_KEY)
+        val novaListaProduto = arguments?.getParcelableArrayList<ItemProduto>(LISTA_KEY)
 
         if (novaListaProduto != null) {
             listaProduto = novaListaProduto

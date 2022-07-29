@@ -36,8 +36,8 @@ class ProdutosFragment : Fragment() {
         binding.btnValorTotal.setOnClickListener {
             irParaValorTotal()
         }
-
         criarListaProduto()
+        recuperarDadosProduto()
     }
 
     private fun criarListaProduto() {
@@ -66,15 +66,22 @@ class ProdutosFragment : Fragment() {
     }
 
     private fun irParaListaProduto() {
-        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
+        val bundle = bundleOf(LISTA_KEY to listaProduto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_produtosFragment_to_produtoCadastradoFragment, bundle)
     }
 
     private fun irParaValorTotal() {
-        val bundle = bundleOf(PRODUTO_KEY to listaProduto)
+        val bundle = bundleOf(LISTA_KEY to listaProduto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_produtosFragment_to_valorTotalFragment, bundle)
+    }
+    private fun recuperarDadosProduto() {
+        val novaListaProduto = arguments?.getParcelableArrayList<ItemProduto>(LISTA_KEY)
+
+        if (novaListaProduto != null) {
+            listaProduto = novaListaProduto
+        }
     }
 
     private fun msgErro(nome: String, quantidade: String, valor: String, receita: String) {
